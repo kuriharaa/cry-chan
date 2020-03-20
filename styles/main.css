@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:800&display=swap');
+
+body, html {
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.home {
+	height: -webkit-fill-available;
+}
+
+/*left bar*/
+
+.leftSide {
+	background-color: #4D008C;
+}
+
+.logo-block {
+	padding-top: 37%;
+}
+
+.logo-label {
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	font-size: 3vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	padding-top: 25%;
+	/*text-decoration: underline;*/
+}
+
+.line {
+	border-top: 3px solid black;
+}
+
+.soc {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-size: cover;
+	margin-top: 1.9em;
+}
+
+.soc-git {
+	background-image: url(../svg/git.svg);
+}
+
+.soc-git:hover, .soc-git:focus {
+	filter: invert(100%) sepia(0%) saturate(7485%) hue-rotate(102deg) brightness(100%) contrast(105%);
+}
+
+.soc-twitter {
+	background-image: url(../svg/twitter.svg);
+	margin-left: 1.4em;
+}
+
+.soc-twitter:hover, .soc-twitter:focus {
+	filter: invert(100%) sepia(0%) saturate(7485%) hue-rotate(102deg) brightness(100%) contrast(105%);
+}
+
+.soc-dis {
+	background-image: url(../svg/dis.svg);
+	margin-left: 1.4em;
+}
+
+.soc-dis:hover, .soc-dis:focus {
+	filter: invert(100%) sepia(0%) saturate(7485%) hue-rotate(102deg) brightness(100%) contrast(105%);
+}
+
+/*left bar*/
+
+/*right bar*/
+
+.rightSide {
+	background-color: #000000;
+	/*background-image: url("../img/anime-girl.png");*/
+}
+
+.anime-pic {
+	background-image: url("../img/anime-girl.png");
+	height: 100%;
+	/*background-position: right;*/
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.boards-title {
+	color: #4D008C;
+	font-style: normal;
+	text-align: right;
+	font-size: 3vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	padding-top: 6%;
+	padding-right: 6%;
+}
+
+.menu{
+	padding-top: 8%;
+}
+
+thead {
+  	border-bottom: 2px solid #4D008C; 
+ 	border-collapse:separate; 
+  	border-spacing: 10px 10px;
+} 
+
+.board-cat {
+	color: #4D008C;
+	font-weight: bold;
+}
+
+th {
+	color: #4D008C;
+	font-size: 2vw;
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+tr > td > a {
+	color: #FFFFFF;
+	font-size: 1.8vw;
+	margin: 1em;
+}
+
+tr > td > a
+{
+    position: relative;
+}
+
+tr > td > a:hover {
+	color: #4D008C;
+}
+
+tr > td > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #4D008C;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+tr > td > a:hover:before {
+	visibility: visible;
+	width: 100%;
+	color: #4D008C;
+  }
