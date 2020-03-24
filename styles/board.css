@@ -1,0 +1,120 @@
+.rightSide {
+	background-color: #000000;
+}
+
+.board-name {
+	padding-left: 6%;
+	padding-right: 6%;
+	border-bottom: 2px solid #4D008C; 
+}
+
+.thread {
+	padding-bottom: 10%;
+	border-bottom: 2px solid #4D008C;
+	width: 100%;
+}
+
+.thread-title {
+	color: #4D008C;
+	font-style: normal;
+	text-align: left;
+	font-size: 3vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+	padding-top: 6%;
+}
+
+.btn-new-thread {
+  margin-left: 4%;
+  margin-bottom: 4%;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #000000;
+  padding: 0.1% 5%;
+  font-size: 2.5vw;
+  cursor: pointer;
+  border-color: #4D008C;
+  color: #4D008C;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-new-thread:hover {
+  background-color: #4D008C;
+  color: #000000;
+}
+
+.thread-pic {
+	max-width: 60%;
+    height: auto;
+}
+
+.thread-headline {
+	font-family: 'Montserrat', sans-serif;
+	color: #4D008C;
+	font-size: 1.4vw;
+}
+
+.thread-info, .thread-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: #4D008C;
+	font-size: 1vw;
+}
+
+.thread-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: #FFFFFF;
+	font-size: 1vw;
+}
+
+.thread-info > a {
+	text-decoration: none !important;
+	color: #4D008C;
+}
+
+.thread-info > a:hover {
+	color: #FFFFFF;
+}
+
+
+.replies {
+	padding-left: 15%;
+	padding-right: 6%;
+}
+
+.replies-border {
+	border-left: 2px solid #4D008C;
+	/*border-right: 2px solid #4D008C;*/
+	/*padding-top: 4%;
+	padding-top: 4%;*/
+}
+
+.replies-pic {
+	max-width: 40%;
+    height: auto;
+}
+
+.replies-headline {
+	font-family: 'Montserrat', sans-serif;
+	color: #4D008C;
+	font-size: 1.4vw;
+}
+
+.replies-info, .replies-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: #4D008C;
+	font-size: 1vw;
+}
+
+.replies-desc {
+	font-family: 'Montserrat', sans-serif;
+	color: #FFFFFF;
+	font-size: 1vw;
+}
+
+.replies-info > a {
+	text-decoration: none !important;
+	color: #4D008C;
+}
+
+.replies-info > a:hover {
+	color: #FFFFFF;
+}

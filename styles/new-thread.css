@@ -1,0 +1,49 @@
+.new-thread-modal {
+	border-radius: 0 !important;
+	background-color: #000000 !important;
+	border: 1px solid #4D008C !important;
+}
+
+.modal-thread-title {
+	font-family: 'Montserrat', sans-serif;
+	color: #FFFFFF;
+	font-size: 1vw;
+}
+
+.modal-thread-upload {
+	border-radius: 0 !important;
+}
+
+.btn-pic-upload {
+  border: 1px solid #000000 !important;
+  background-color: #000000 !important;
+  color: #000000 !important;
+  cursor: pointer !important;
+  border-color: #4D008C !important;
+  color: #4D008C !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-pic-upload:hover {
+  background-color: #4D008C !important;
+  color: #000000 !important;
+}
+
+.btn-thread-post {
+  border: 1px solid #000000 !important;
+  background-color: #000000 !important;
+  color: #000000 !important;
+  cursor: pointer !important;
+  border-color: #4D008C !important;
+  color: #4D008C !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.btn-thread-post:hover {
+  background-color: #4D008C !important;
+  color: #000000 !important;
+}
+
+.pre-line {
+	border-top: 1px solid #4D008C !important;
+}
