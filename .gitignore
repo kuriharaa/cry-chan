@@ -1,0 +1,11 @@
+node_modules
+
+schema.txt
+technologies.txt
+devlog.txt
+api.text
+
+client/dist
+server/static
+
+.env
