@@ -32,6 +32,7 @@ module.exports = env => {
       ]
     },
     devServer: {
+      //writeToDisk: true,
       contentBase: path.join(__dirname, "client", "dist"),
       historyApiFallback: true,
       proxy: {

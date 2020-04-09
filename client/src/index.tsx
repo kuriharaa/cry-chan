@@ -4,5 +4,7 @@ import App from "./components/App";
 import "./styles/main.scss";
 import "./styles/leftbar.scss";
 import "./styles/home.scss";
+import "./styles/board.scss";
+import "./styles/new-thread.scss";
 
 ReactDOM.render(<App />, document.getElementById("app"));

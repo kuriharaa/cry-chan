@@ -22,7 +22,8 @@ export default class ApiAdapter {
     boardCredentials: IBoardCredentials
   ): Promise<IThread[]> {
     return axios
-      .get(`/api/${boardCredentials.shortName}`)
+      //.get(`/api/${boardCredentials.shortName}`)
+      .get(`/assets/api/test.json`)
       .then(response => response.data)
       .then(threads => array(threadDecoder).runWithException(threads));
   }
