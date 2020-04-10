@@ -1,7 +1,7 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import HomePage from "../components/HomePage";
-import { Board, ThreadContainer } from "../components/Board";
+import { Board } from "../components/Board";
 import { allBoards } from "../../../shared/lib/static/BoardSections"; 
 import {
   changangeCurrentBoard,
@@ -28,7 +28,7 @@ const AppRouter = props => (
             exact={true}
           />
         ))}
-        {allBoards.map(board => (
+        {/* {allBoards.map(board => (
           <Route
             path={`${board.link}/:threadNumber`}
             render={routeProps => {
@@ -39,7 +39,7 @@ const AppRouter = props => (
               return <ThreadContainer {...routeProps} />;
             }}
           />
-        ))}
+        ))} */}
       </Switch>
     </div>
   </BrowserRouter>

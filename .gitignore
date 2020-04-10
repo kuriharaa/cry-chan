@@ -1,5 +1,7 @@
 node_modules
 
+yarn.lock
+
 schema.txt
 technologies.txt
 devlog.txt

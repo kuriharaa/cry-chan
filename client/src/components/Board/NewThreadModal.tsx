@@ -25,7 +25,7 @@ const NewThreadModal = () => {
                 <div className="new-thread-modal modal-content">
                     <div className="modal-body">
                         <form>
-                            <div className="form-group text-left">
+                            <div className="form-group text-left subject-bottom">
                                 <label className="col-form-label">
                                     <p className="modal-thread-title">S U B J E C T</p>
                                 </label>

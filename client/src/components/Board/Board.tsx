@@ -32,7 +32,7 @@ export class Board extends React.Component<IBoardProps, {}> {
     return (
       <div>
         <BoardHeader
-          actionName="Start a New Thread"
+          actionName="new thread"
           credentials={this.props.boardCredentials}
         />
         {/* <MidPanel /> */}

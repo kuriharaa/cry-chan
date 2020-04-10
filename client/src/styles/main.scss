@@ -10,8 +10,9 @@ body, html {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.2em;
   background-color: #000000;
+  display:none;
 }
  
 body::-webkit-scrollbar-track {
