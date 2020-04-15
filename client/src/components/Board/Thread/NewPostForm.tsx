@@ -2,7 +2,7 @@ import * as React from "react";
 import { ClipLoader } from "react-spinners";
 import { css } from "react-emotion";
 import Loading from "../../Loading";
-import FileUpload from "../../FileUpload";
+import FileUpload from "../FileUpload";
 import { IFile } from "../../../../../shared/lib/types/File";
 
 interface INewPostFormProps {

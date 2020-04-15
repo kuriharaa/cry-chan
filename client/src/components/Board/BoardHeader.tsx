@@ -6,7 +6,7 @@ import { IBoardCredentials } from "../../../../shared/lib/types/BoardCredentials
 import TextLink from "../TextLink";
 import NewThreadFormContainer from "./NewThreadFormContainer";
 import NewPostFormContainer from "./Thread/NewPostFormContainer";
-import NewThreadModal from "./NewThreadModal";
+import NewModal from "./NewModal";
 
 interface IBoardHeaderProps {
   credentials: IBoardCredentials;
@@ -33,14 +33,15 @@ class BoardHeader extends React.Component<IBoardHeaderProps, IBoardHeaderState> 
   public render () {
     const { credentials, actionName, Form } = this.props;
     const { isFormOpen } = this.state;
+
     return (
       <div className="row align-items-start justify-content-between w-100 board-name">
         <p className="thread-title w-100 text-center">
           {credentials.link.replace("/","/ ") + " /"} - {credentials.name}
-          <button type="button" className="btn-new-thread" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" className="btn-new-thread" data-toggle="modal" data-target="#newThreadModal">
             new thread
           </button> 
-          <NewThreadModal/>
+          <NewModal isThread={true}/>
         </p>
       </div>
 

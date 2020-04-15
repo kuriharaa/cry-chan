@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as moment from "moment";
 import PostId from "../../../../shared/lib/types/PostId";
+import NewModal from "./NewModal"
 import PostImage from "./PostImage";
 
 interface IPostProps {
@@ -30,9 +31,10 @@ const Post: React.SFC<IPostProps> = ({
         </div>
         <div className="col-9">
           <div className="text-right">	
-            <button className="btn btn-sm">
+            <button className="btn btn-sm" data-toggle="modal" data-target={`#post_${postNumber}`}>
               <img src="assets/svg/option.svg" className="img-fluid" width="60%" height="60%"/>
             </button>
+            <NewModal isThread={false} modalNumber={postNumber.toString()} opPost={true}/>
           </div>
           <div className="thread-headline text-left">
             {subject}
@@ -73,11 +75,11 @@ const Post: React.SFC<IPostProps> = ({
 					</div>
           <div className="col-9">
             <div className="text-right">
-              <button className="btn btn-sm" data-toggle="modal" data-target="#exampleReply_1">
+              <button className="btn btn-sm" data-toggle="modal" data-target={`#post_${postNumber}`}>
                 <img src="assets/svg/option.svg" className="img-fluid" width="60%" height="60%" />
               </button>						
             </div>
-
+            <NewModal isThread={false} modalNumber={postNumber.toString()} opPost={false}/>
             <div className="replies-info text-left">
               <a href="">>>24496769</a>
               <a href="">>>24496769</a>
@@ -94,6 +96,7 @@ const Post: React.SFC<IPostProps> = ({
             </div>
 					</div>
 				</div>
+
   );
 };
 

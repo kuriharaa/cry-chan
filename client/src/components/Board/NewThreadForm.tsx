@@ -1,6 +1,6 @@
 import * as React from "react";
 import Loading from "../Loading";
-import FileUpload from "../FileUpload";
+import FileUpload from "./FileUpload";
 import { IFile } from "../../../../shared/lib/types/File";
 
 interface IThreadFormProps {
