@@ -8,6 +8,35 @@
 	border-bottom: 2px solid #4D008C; 
 }
 
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+	background-color: #555;
+  }
+
+.crying-eyes {
+	background-image: url("/assets/img/cry-error.png");
+	height: 100%;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
 .thread {
 	padding-bottom: 10%;
 	border-bottom: 2px solid #4D008C;
@@ -118,3 +147,42 @@
 .replies-info > a:hover {
 	color: #FFFFFF;
 }
+
+flash-messages {
+	position: fixed;
+	right: 0;
+	top: 0.5rem;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .flash-message {
+	background-color: #000000;
+	padding: 0.5rem;
+	// border-radius: 2rem;
+	border: solid 1.2px #4D008C;
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+  
+	&--danger {
+	  color: red;
+	}
+  
+	&--success {
+	  color: green;
+	}
+  
+	&__text {
+	  font-size: 1rem;
+	  font-weight: bold;
+	  color: #4D008C;
+	//margin-right: 0.3rem;
+	}
+  
+	&__close {
+	  font-size: 1rem;
+	}
+  }

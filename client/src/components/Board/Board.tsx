@@ -45,9 +45,6 @@ export class Board extends React.Component<IBoardProps, {}> {
                 curBoard={this.props.boardCredentials}
               />
             ))}
-        {/* <div className="board__footer">
-          <BoardList />
-        </div> */}
       </div>
     );
   }
