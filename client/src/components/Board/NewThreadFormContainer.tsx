@@ -1,14 +1,16 @@
 import * as React from "react";
-import NewThreadForm from "./NewThreadForm";
+import NewThreadModal from "./NewThreadModal";
 import { connect } from "react-redux";
 import { postNewThread } from "../../redux/actions/curBoard";
 import { IRootState } from "../../redux/reducers/rootReducer";
+import { IBoardCredentials } from "../../../../shared/lib/types/BoardCredentials";
+import { ICurThreadState } from "../../redux/reducers/curThread";
 import { IFile } from "../../../../shared/lib/types/File";
 import ISendThreadDTO from "../../lib/SendThreadDTO";
 
 interface INewThreadFormContainerState {
   authorName: string;
-  threadName: string;
+  threadName?: string;
   message: string;
   file: IFile;
 }
@@ -48,6 +50,7 @@ export class NewThreadFormContainer extends React.Component<
   }
 
   public onChange = (e: any) => {
+    console.log("onChanged");
     const { name, value } = e.currentTarget;
     if (value.length < this.lengthConstrains[name]) {
       this.setState(() => ({
@@ -57,10 +60,12 @@ export class NewThreadFormContainer extends React.Component<
   };
 
   public onFileLoadSuccess = (file: IFile) => {
+    console.log("file load success");
     this.setState(() => ({ file }));
   };
 
   public onSubmit = (e: React.FormEvent) => {
+    console.log("onSubmit");
     e.preventDefault();
     const {
       authorName,
@@ -90,7 +95,7 @@ export class NewThreadFormContainer extends React.Component<
 
   public render() {
     return (
-      <NewThreadForm
+      <NewThreadModal
         onAuthorNameChange={this.onChange}
         onThreadNameChange={this.onChange}
         onMessageChange={this.onChange}

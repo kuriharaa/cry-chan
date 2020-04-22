@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as moment from "moment";
 import PostId from "../../../../shared/lib/types/PostId";
-import NewModal from "./NewModal"
+import NewThreadFormContainer from "./NewThreadFormContainer"
 import PostImage from "./PostImage";
 
 interface IPostProps {
@@ -27,14 +27,14 @@ const Post: React.SFC<IPostProps> = ({
     return (
       <div className="row mx-5 mt-3">
         <div className="col-3">
-          <img src="assets/img/dump-touhou-face.png" className="img-fluid thread-pic"/>
+          <img src="http://localhost:8080/assets/img/dump-touhou-face.png" className="img-fluid thread-pic"/>
         </div>
         <div className="col-9">
           <div className="text-right">	
-            <button className="btn btn-sm" data-toggle="modal" data-target={`#post_${postNumber}`}>
+            {/* <button className="btn btn-sm" data-toggle="modal" data-target={`#post_${postNumber}`}>
               <img src="assets/svg/option.svg" className="img-fluid" width="60%" height="60%"/>
             </button>
-            <NewModal isThread={false} modalNumber={postNumber.toString()} opPost={true}/>
+            <NewThreadFormContainer modalNumber={postNumber.toString()} opPost={true}/> */}
           </div>
           <div className="thread-headline text-left">
             {subject}
@@ -71,15 +71,15 @@ const Post: React.SFC<IPostProps> = ({
   return (
         <div className="row text-left replies-border py-3 replies-info">
           <div className="col-3">
-            <img src="assets/img/dump-touhou-face.png" className="img-fluid replies-pic"/>
+            <img src="http://localhost:8080/assets/img/dump-touhou-face.png" className="img-fluid replies-pic"/>
 					</div>
           <div className="col-9">
-            <div className="text-right">
+            {/* <div className="text-right">
               <button className="btn btn-sm" data-toggle="modal" data-target={`#post_${postNumber}`}>
                 <img src="assets/svg/option.svg" className="img-fluid" width="60%" height="60%" />
               </button>						
             </div>
-            <NewModal isThread={false} modalNumber={postNumber.toString()} opPost={false}/>
+            <NewThreadFormContainer modalNumber={postNumber.toString()} opPost={false}/> */}
             <div className="replies-info text-left">
               <a href="">>>24496769</a>
               <a href="">>>24496769</a>

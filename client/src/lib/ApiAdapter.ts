@@ -13,7 +13,8 @@ export default class ApiAdapter {
     threadNumber: number
   ): Promise<IThread> {
     return axios
-      .get(`/api/${boardCredentials.shortName}/${threadNumber}`)
+      //.get(`/api/${boardCredentials.shortName}/${threadNumber}`)
+      .get(`/assets/api/state.json`)
       .then(response => response.data)
       .then(thread => threadDecoder.runWithException(thread));
   }

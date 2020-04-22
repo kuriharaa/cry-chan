@@ -6,7 +6,7 @@ import { IBoardCredentials } from "../../../../shared/lib/types/BoardCredentials
 import TextLink from "../TextLink";
 import NewThreadFormContainer from "./NewThreadFormContainer";
 import NewPostFormContainer from "./Thread/NewPostFormContainer";
-import NewModal from "./NewModal";
+import NewModal from "./NewThreadModal";
 
 interface IBoardHeaderProps {
   credentials: IBoardCredentials;
@@ -41,7 +41,8 @@ class BoardHeader extends React.Component<IBoardHeaderProps, IBoardHeaderState> 
           <button type="button" className="btn-new-thread" data-toggle="modal" data-target="#newThreadModal">
             new thread
           </button> 
-          <NewModal isThread={true}/>
+          <NewThreadFormContainer />
+          {/* <NewModal isThread={true}/> */}
         </p>
       </div>
 

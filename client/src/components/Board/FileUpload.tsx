@@ -11,20 +11,26 @@ export default class FileUpload extends React.Component<IProps, {}> {
   }
 
   public onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("changed");
     const current = e.currentTarget;
 
     const file = current.nextSibling.firstChild as HTMLInputElement;
     let fileName = e.target.files[0].name;
     file.value = fileName;
-
+    
+    let fileType = e.target.files[0].type;
     let preview = current.parentElement.parentElement.nextSibling.firstChild as HTMLImageElement;
 
     let reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
-    reader.onload = function(e) {
+    reader.onload = () => {
       preview.src = reader.result.toString();
       preview.removeAttribute("hidden");
+      const result: IFile = {
+        data: reader.result as string,
+        name: fileName,
+        type: fileType
+      };
+      this.props.onLoadSuccess(result);
     };
 
     // const { files } = e.currentTarget;

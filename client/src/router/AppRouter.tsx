@@ -10,6 +10,7 @@ import {
 import { connect } from "react-redux";
 import { changeCurrentThreadNumber } from "../redux/actions/curThread";
 import FlashMessagesList from "../components/FlashMessagesList";
+import ThreadContainer from "../components/Board/Thread/ThreadContainer";
 
 const AppRouter = props => (
   <BrowserRouter>
@@ -28,7 +29,7 @@ const AppRouter = props => (
             exact={true}
           />
         ))}
-        {/* {allBoards.map(board => (
+        {allBoards.map(board => (
           <Route
             path={`${board.link}/:threadNumber`}
             render={routeProps => {
@@ -39,7 +40,7 @@ const AppRouter = props => (
               return <ThreadContainer {...routeProps} />;
             }}
           />
-        ))} */}
+        ))}
       </Switch>
     </div>
   </BrowserRouter>

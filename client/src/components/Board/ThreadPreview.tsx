@@ -28,7 +28,9 @@ export default class ThreadPreview extends React.Component<
 
           <div className="row mx-5 mt-2">
             <div className="col-3 text-center thread-info">
-              <a href="">+ {numberOfOmmitedPosts} replies omitted</a>
+              <a href={`${link}/${opPost.postNumber}`}>
+              + {numberOfOmmitedPosts} replies omitted
+              </a>
             </div>
             <div className="col-9 text-left thread-info">
               <a href="">>>24496769</a>
