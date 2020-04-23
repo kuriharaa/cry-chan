@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\cry-chan.Core\cry-chan.Core.csproj" />
+    <ProjectReference Include="..\cry-chan.Services\cry-chan.Services.csproj" />
+    <ProjectReference Include="..\cry-chan.Data\cry-chan.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>cry_chan.Api</RootNamespace>
+  </PropertyGroup>
+
+
+</Project>
