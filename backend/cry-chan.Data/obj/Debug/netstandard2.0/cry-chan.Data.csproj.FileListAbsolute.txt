@@ -1,0 +1,11 @@
+D:\apps\cry-chan\backend\cry-chan.Data\bin\Debug\netstandard2.0\cry-chan.Data.deps.json
+D:\apps\cry-chan\backend\cry-chan.Data\bin\Debug\netstandard2.0\cry-chan.Data.dll
+D:\apps\cry-chan\backend\cry-chan.Data\bin\Debug\netstandard2.0\cry-chan.Data.pdb
+D:\apps\cry-chan\backend\cry-chan.Data\bin\Debug\netstandard2.0\cry-chan.Core.dll
+D:\apps\cry-chan\backend\cry-chan.Data\bin\Debug\netstandard2.0\cry-chan.Core.pdb
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.csprojAssemblyReference.cache
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.AssemblyInfoInputs.cache
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.AssemblyInfo.cs
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.csproj.CopyComplete
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.dll
+D:\apps\cry-chan\backend\cry-chan.Data\obj\Debug\netstandard2.0\cry-chan.Data.pdb
