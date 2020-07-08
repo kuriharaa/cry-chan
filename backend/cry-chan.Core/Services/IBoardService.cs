@@ -6,7 +6,8 @@ namespace cry_chan.Core.Services
 {
     public interface IBoardService
     {
-        Task<IEnumerable<Board>> GetAllBoards();
+        //Task<IEnumerable<Board>> GetAllBoards();
+        Task<Board> GetBoardByName(string boardName);
     }
 }
 

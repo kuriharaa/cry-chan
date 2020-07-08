@@ -14,11 +14,16 @@ namespace cry_chan.Services
             this._unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<Board>> GetAllBoards()
+        //public async Task<IEnumerable<Board>> GetAllBoards()
+        //{
+        //    return await _unitOfWork
+        //        .Boards
+        //        .GetAllAsync();
+        //}
+
+        public async Task<Board> GetBoardByName(string boardName)
         {
-            return await _unitOfWork
-                .Boards
-                .GetAllAsync();
+            return await _unitOfWork.Boards.GetAllWithBoardByNameAsync(boardName);
         }
     }
 }

@@ -41,6 +41,11 @@ namespace cry_chan.Data.Repositories
             return Context.Set<TEntity>().FindAsync(id);
         }
 
+        public async ValueTask<TEntity> GetByNameAsync(string name)
+        {
+            return await Context.Set<TEntity>().FirstOrDefaultAsync(e => e.Equals(name));
+        }
+
         public void Remove(TEntity entity)
         {
             Context.Set<TEntity>().Remove(entity);

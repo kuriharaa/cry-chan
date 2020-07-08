@@ -13,12 +13,11 @@ namespace cry_chan.Data.Repositories
             : base(context)
         { }
 
-        public async Task<IEnumerable<Board>> GetAllWithThreadAsync()
+        public async Task<Board> GetAllWithBoardByNameAsync(string boardName)
         {
-            return await CryChanDbContext
-                .Boards
-                .Include(m => m.Threads)
-                .ToListAsync();
+            return await CryChanDbContext.Boards
+                .Include(t => t.Threads)
+                .SingleOrDefaultAsync(b => b.Name.Equals(boardName));
         }
 
         private CryChanDbContext CryChanDbContext

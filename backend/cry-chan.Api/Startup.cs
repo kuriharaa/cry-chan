@@ -38,7 +38,7 @@ namespace cry_chan.Api
             services.AddTransient<IBoardService, BoardService>();
             services.AddTransient<IThreadService, ThreadService>();
             services.AddTransient<IPostService, PostService>();
-            services.AddDbContext<CryChanDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("cry-chan.Data")));
+            services.AddDbContext<CryChanDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("cry-chan.Data")), ServiceLifetime.Transient);
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "CryChan", Version = "v1" });

@@ -28,15 +28,11 @@ namespace cry_chan.Api.Controllers
         [HttpGet("{boardName}")]
         public async Task<ActionResult<IEnumerable<Thread>>> GetThreadsByBoard(string boardName)
         {
-            int? boardId = _boardService
-                                .GetAllBoards()
-                                .Result
-                                .FirstOrDefault(b => b.Name.Equals(boardName))?
-                                .Id;
+            var board = await _boardService.GetBoardByName(boardName);
 
-            if (boardId.HasValue)
+            if (board != null)
             {
-                var threads = await _threadService.GetThreadsByBoardId(boardId.Value);
+                var threads = await _threadService.GetThreadsByBoardId(board.Id);
                 return Ok(threads);
             }
                 return Ok();

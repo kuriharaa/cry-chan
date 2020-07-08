@@ -6,6 +6,6 @@ namespace cry_chan.Core.Repositories
 {
     public interface IBoardRepository : IRepository<Board>
     {
-        Task<IEnumerable<Board>> GetAllWithThreadAsync();
+        Task<Board> GetAllWithBoardByNameAsync(string boardName);
     }
 }
