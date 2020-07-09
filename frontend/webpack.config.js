@@ -37,7 +37,7 @@ module.exports = env => {
       historyApiFallback: true,
       proxy: {
         "/api/*": {
-          target: "http://localhost:3000"
+          target: "https://localhost:44347"
         },
         "/images/*": {
           target: "http://localhost:3000/"

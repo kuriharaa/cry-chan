@@ -24,6 +24,14 @@ namespace cry_chan.Data.Repositories
                 .ToListAsync();
         }
 
+        public async Task<Thread> GetThreadByIdAsync(int threadId)
+        {
+            return await CryChanDbContext
+                .Threads
+                .Include(m => m.Posts)
+                .FirstOrDefaultAsync(m => m.Id == threadId);
+        }
+
         private CryChanDbContext CryChanDbContext
         {
             get { return Context as CryChanDbContext; }

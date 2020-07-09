@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using cry_chan.Api.Helpers;
 using cry_chan.Core.Models;
 using cry_chan.Core.Services;
 using cry_chan.Services;
@@ -33,7 +34,8 @@ namespace cry_chan.Api.Controllers
             if (board != null)
             {
                 var threads = await _threadService.GetThreadsByBoardId(board.Id);
-                return Ok(threads);
+                
+                return Ok(ResponseBuilder.GetResponseBoard(threads));
             }
                 return Ok();
         }
@@ -41,8 +43,9 @@ namespace cry_chan.Api.Controllers
         [HttpGet("{boardName}/{threadId}")]
         public async Task<ActionResult<IEnumerable<Thread>>> GetPostsByThread(string boardName, int threadId)
         {
-            var posts = await _postService.GetPostsByThreadId(threadId);
-            return Ok(posts);
+            var thread = await _threadService.GetThreadById(threadId);
+            //var posts = await _postService.GetPostsByThreadId(threadId);
+            return Ok(ResponseBuilder.GetResponseThread(thread));
         }
     }
 }

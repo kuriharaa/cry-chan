@@ -21,6 +21,11 @@ namespace cry_chan.Services
             return newthread;
         }
 
+        public async Task<Thread> GetThreadById(int threadId)
+        {
+            return await _unitOfWork.Threads.GetThreadByIdAsync(threadId);
+        }
+
         public async Task<IEnumerable<Thread>> GetThreadsByBoardId(int boardId)
         {
             return await _unitOfWork.Threads.GetAllWithBoardByIdAsync(boardId);

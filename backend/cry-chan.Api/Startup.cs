@@ -33,6 +33,10 @@ namespace cry_chan.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:8080").AllowAnyMethod().AllowAnyHeader();
+            }));
             services.AddControllers();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IBoardService, BoardService>();
@@ -52,6 +56,13 @@ namespace cry_chan.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //app.UseCors(builder => builder
+            //                            .AllowAnyOrigin()
+            //                            .AllowAnyMethod()
+            //                            .AllowAnyHeader()
+            //                            .AllowCredentials());
+            app.UseCors("ApiCorsPolicy");
 
             app.UseHttpsRedirection();
 

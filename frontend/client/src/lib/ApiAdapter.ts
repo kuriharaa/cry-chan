@@ -14,7 +14,8 @@ export default class ApiAdapter {
   ): Promise<IThread> {
     return axios
       //.get(`/api/${boardCredentials.shortName}/${threadNumber}`)
-      .get(`/assets/api/state.json`)
+      //.get(`/assets/api/state.json`)
+      .get(`https://localhost:44347/api/${boardCredentials.shortName}/${threadNumber}`)
       .then(response => response.data)
       .then(thread => threadDecoder.runWithException(thread));
   }
@@ -24,7 +25,8 @@ export default class ApiAdapter {
   ): Promise<IThread[]> {
     return axios
       //.get(`/api/${boardCredentials.shortName}`)
-      .get(`/assets/api/test.json`)
+      //.get(`/assets/api/test.json`)
+      .get(`https://localhost:44347/api/${boardCredentials.shortName}`)
       .then(response => response.data)
       .then(threads => array(threadDecoder).runWithException(threads));
   }

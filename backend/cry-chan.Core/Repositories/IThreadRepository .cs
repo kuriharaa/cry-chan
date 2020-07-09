@@ -7,5 +7,6 @@ namespace cry_chan.Core.Repositories
     public interface IThreadRepository : IRepository<Thread>
     {
         Task<IEnumerable<Thread>> GetAllWithBoardByIdAsync(int boardId);
+        Task<Thread> GetThreadByIdAsync(int threadId);
     }
 }
