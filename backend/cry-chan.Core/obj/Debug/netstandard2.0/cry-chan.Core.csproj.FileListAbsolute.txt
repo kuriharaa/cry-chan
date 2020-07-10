@@ -5,3 +5,4 @@ D:\apps\cry-chan\backend\cry-chan.Core\obj\Debug\netstandard2.0\cry-chan.Core.As
 D:\apps\cry-chan\backend\cry-chan.Core\obj\Debug\netstandard2.0\cry-chan.Core.AssemblyInfo.cs
 D:\apps\cry-chan\backend\cry-chan.Core\obj\Debug\netstandard2.0\cry-chan.Core.dll
 D:\apps\cry-chan\backend\cry-chan.Core\obj\Debug\netstandard2.0\cry-chan.Core.pdb
+D:\apps\cry-chan\backend\cry-chan.Core\obj\Debug\netstandard2.0\cry-chan.Core.csprojAssemblyReference.cache

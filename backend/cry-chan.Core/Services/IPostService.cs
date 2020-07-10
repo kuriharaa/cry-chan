@@ -8,5 +8,6 @@ namespace cry_chan.Core.Services
     {
         Task<IEnumerable<Post>> GetPostsByThreadId(int threadId);
         Task<Post> CreatePost(Post newPost);
+        Task<Post> UpdatePost(Post newPost);
     }
 }

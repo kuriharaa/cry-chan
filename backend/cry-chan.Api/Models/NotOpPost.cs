@@ -13,5 +13,6 @@ namespace cry_chan.Api.Models
         public string content { get; set; }
         public int thread { get; set; }
         public int postNumber { get; set; }
+        public File file { get; set; }
     }
 }

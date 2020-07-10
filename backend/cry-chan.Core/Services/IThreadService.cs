@@ -9,5 +9,6 @@ namespace cry_chan.Core.Services
         Task<IEnumerable<Thread>> GetThreadsByBoardId(int boardId);
         Task<Thread> GetThreadById(int threadId);
         Task<Thread> CreateThread(Thread newthread);
+        Task<Thread> UpdateThread(Thread newthread);
     }
 }

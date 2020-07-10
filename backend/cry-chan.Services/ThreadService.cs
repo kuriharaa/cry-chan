@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using cry_chan.Core;
 using cry_chan.Core.Models;
@@ -16,6 +17,9 @@ namespace cry_chan.Services
 
         public async Task<Thread> CreateThread(Thread newthread)
         {
+            newthread.Date = DateTime.Now;
+            newthread.OpPostNumber = "0";
+            newthread.PostNumber = 0;
             await _unitOfWork.Threads.AddAsync(newthread);
             await _unitOfWork.CommitAsync();
             return newthread;
@@ -29,6 +33,14 @@ namespace cry_chan.Services
         public async Task<IEnumerable<Thread>> GetThreadsByBoardId(int boardId)
         {
             return await _unitOfWork.Threads.GetAllWithBoardByIdAsync(boardId);
+        }
+
+        public async Task<Thread> UpdateThread(Thread newthread)
+        {
+            newthread.OpPostNumber = newthread.Id.ToString();
+            newthread.PostNumber = newthread.Id;
+            await _unitOfWork.CommitAsync();
+            return newthread;
         }
     }
 }

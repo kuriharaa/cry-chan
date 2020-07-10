@@ -51,10 +51,8 @@
             }
           }
         }
-      }
-    },
-    "/Api/{boardName}/{threadId}": {
-      "get": {
+      },
+      "post": {
         "tags": [
           "Api"
         ],
@@ -66,7 +64,66 @@
             "schema": {
               "type": "string"
             }
-          },
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpPost"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpPost"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/OpPost"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Thread"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Thread"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Thread"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/{boardName}/{threadId}": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "parameters": [
           {
             "name": "threadId",
             "in": "path",
@@ -74,6 +131,14 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          },
+          {
+            "name": "boardName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
         ],
@@ -106,6 +171,53 @@
                 }
               }
             }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "parameters": [
+          {
+            "name": "boardName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "threadId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotOpPost"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotOpPost"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotOpPost"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -184,6 +296,94 @@
               "$ref": "#/components/schemas/Post"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "File": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OpPost": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "thread": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "postNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "file": {
+            "$ref": "#/components/schemas/File"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NotOpPost": {
+        "type": "object",
+        "properties": {
+          "authorName": {
+            "type": "string",
+            "nullable": true
+          },
+          "_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "thread": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "postNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "file": {
+            "$ref": "#/components/schemas/File"
           }
         },
         "additionalProperties": false
