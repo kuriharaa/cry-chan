@@ -20,7 +20,7 @@
     "@types/redux": "^3.6.0",
     "@types/shortid": "^0.0.29",
     "@types/sinon": "^5.0.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.18.3",
     "boom": "^7.2.0",
     "bootstrap": "^4.4.1",
